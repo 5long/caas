@@ -27,5 +27,5 @@ if (!clipper.isAvailableSync()) {
   process.exit(2)
 }
 
-app.use("/", handler(clipper))
+app.use(handler(clipper))
 app.listen(argv.port)
