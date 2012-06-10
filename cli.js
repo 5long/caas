@@ -2,11 +2,16 @@
 
 var express = require("express")
   , app = express.createServer()
-  , spawn = require("child_process").spawn
   , pump = require("util").pump
+  , Clipper = require("./lib/clipper/xsel")
+
+if (!Clipper.isAvailableSync()) {
+  console.error("No available clipboard bin.")
+  process.exit(1)
+}
 
 app.get('/', function(req, res) {
-  var clipper = createPasteProc()
+  var clipper = Clipper.createPasteProc()
   res.writeHead(200, {
     "Content-Type": "application/octet-stream"
   })
@@ -15,7 +20,7 @@ app.get('/', function(req, res) {
 })
 
 app.put('/', function(req, res) {
-  var clipper = createCopyProc()
+  var clipper = Clipper.createCopyProc()
   res.writeHead(201)
   clipper.on("exit", end(res))
   pump(req, clipper.stdin, end(res))
@@ -25,14 +30,6 @@ function end(res) {
   return function() {
     res.end()
   }
-}
-
-function createCopyProc() {
-  return spawn('xsel', ["-bi"])
-}
-
-function createPasteProc() {
-  return spawn('xsel', ["-bo"])
 }
 
 app.listen(2547)

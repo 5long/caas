@@ -6,5 +6,6 @@
 , "bin": "./cli.js"
 , "dependencies": {
     "express": "~2"
+  , "which": "~1"
   }
 }
