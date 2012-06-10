@@ -2,8 +2,8 @@
 
 var express = require("express")
   , app = express.createServer()
-  , clipper = require("./lib/clipper/xsel")
-  , handler = require("./lib/handler").create
+  , caas = require("./lib")
+  , clipper = caas.clipper.xsel
   , argv = require("optimist")
             .usage('Usage: $0 [OPTIONS ...]')
             .options('p', {
@@ -32,5 +32,5 @@ if (!clipper.isAvailableSync()) {
   process.exit(2)
 }
 
-app.use(handler(clipper))
+app.use(caas.create(clipper))
 app.listen(argv.port, argv.host)
