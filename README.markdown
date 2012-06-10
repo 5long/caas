@@ -29,7 +29,7 @@ If you're using stuff like [Vagrant] this might be useful.
     -H, --host  Bind to specific host  [default: "0.0.0.0"]
     -h, --help  Call for help
 
-### Embeded in your app
+### Embedded in your app
 
 You can basically use it as an [Express] app. `npm i caas` locally and:
 
