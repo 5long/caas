@@ -31,7 +31,7 @@ If you're using stuff like [Vagrant] this might be useful.
 
 ### Embeded in your app
 
-You can basically use it as an [Express] app. `npm i cass` locally and:
+You can basically use it as an [Express] app. `npm i caas` locally and:
 
     // WARNING: codez not tested.
     var caas = require("caas")
