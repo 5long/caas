@@ -11,6 +11,11 @@ var express = require("express")
               , default: 2547
               , desc: 'The port to bind'
               })
+            .options('H', {
+                alias: 'host'
+              , desc: 'Bind to specific host'
+              , default: '0.0.0.0'
+              })
             .options('h', {
                 alias: 'help'
               , desc: 'Call for help'
@@ -28,4 +33,4 @@ if (!clipper.isAvailableSync()) {
 }
 
 app.use(handler(clipper))
-app.listen(argv.port)
+app.listen(argv.port, argv.host)
