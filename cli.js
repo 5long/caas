@@ -23,8 +23,8 @@ if (argv.help) {
 }
 
 if (!clipper.isAvailableSync()) {
-  console.error("No available clipboard bin.")
-  process.exit(1)
+  console.error("xsel is not found")
+  process.exit(2)
 }
 
 app.use("/", handler(clipper))
