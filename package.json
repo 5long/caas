@@ -1,5 +1,5 @@
 { "name": "caas"
-, "version": "0.0.1-dev"
+, "version": "0.0.1"
 , "description": "Clipboard as an HTTP service"
 , "keywords": ["clipboard", "utility"]
 , "author": "Whyme Lyu <callme5long@gmail.com> (http://randombu.gs)"
