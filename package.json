@@ -8,5 +8,6 @@
 , "dependencies": {
     "express": "~2"
   , "which": "~1"
+  , "optimist": "0.3.4"
   }
 }
