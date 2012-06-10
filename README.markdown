@@ -18,10 +18,10 @@ If you're using stuff like [Vagrant] this might be useful.
 
 2. Access clipboard via `GET` and `PUT`:
 
-       # Copy:
-       $ echo copy this | curl -X PUT --data-binary http://localhost:2547
-       # Paste:
-       $ curl http://localhost:2547
+        # Copy:
+        $ echo copy this | curl -X PUT --data-binary http://localhost:2547
+        # Paste:
+        $ curl http://localhost:2547
 
 #### More CLI options
 
