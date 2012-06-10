@@ -46,6 +46,7 @@ You can basically use it as an [Express] app. `npm i caas` locally and:
 * Support Mac via `pbcopy` and `pbpaste`
 * Figure out how to handle `xclip`. It's got better manpage than `xsel` so
   it deserves some love.
+* Create a manpage out of this README
 
 Patches welcome for sure.
 
