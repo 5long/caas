@@ -40,16 +40,6 @@ You can basically use it as an [Express] app. `npm i caas` locally and:
     // Later(still not tested)
     yourExpressOrConnectApp.use("/klip/", clipApp)
 
-### Later
-
-* Basic auth for security
-* Support Mac via `pbcopy` and `pbpaste`
-* Figure out how to handle `xclip`. It's got better manpage than `xsel` so
-  it deserves some love.
-* Create a manpage out of this README
-
-Patches welcome for sure.
-
 ## LICENSE
 
 [http://sam.zoy.org/wtfpl/](http://sam.zoy.org/wtfpl/)
